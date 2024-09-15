@@ -78,7 +78,7 @@ def localized_choices(language):
         raise ImproperlyConfigured(
             "The PhonePrefixSelect widget requires the babel package be installed."
         )
-    choices = [("", "---------")]
+    choices = [("", "Select Country Code")]
     locale_name = translation.to_locale(language)
     locale = babel.Locale(locale_name)
     for region_code, country_code in REGION_CODE_TO_COUNTRY_CODE.items():
